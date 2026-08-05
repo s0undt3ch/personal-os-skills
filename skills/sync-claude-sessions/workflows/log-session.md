@@ -46,16 +46,16 @@ Claude:
 
 ```bash
 # Update individual fields
-obsidian property:set path="Claude-Sessions/2026-02-05-XXXXXXXX.md" name="title" value="New Title" type=text
-obsidian property:set path="Claude-Sessions/2026-02-05-XXXXXXXX.md" name="status" value="done" type=text
-obsidian property:set path="Claude-Sessions/2026-02-05-XXXXXXXX.md" name="tags" value='["implementation", "automation"]' type=list
-obsidian property:set path="Claude-Sessions/2026-02-05-XXXXXXXX.md" name="rating" value="8" type=number
+obsidian property:set path="claude-sessions/2026-02-05-XXXXXXXX.md" name="title" value="New Title" type=text
+obsidian property:set path="claude-sessions/2026-02-05-XXXXXXXX.md" name="status" value="done" type=text
+obsidian property:set path="claude-sessions/2026-02-05-XXXXXXXX.md" name="tags" value='["implementation", "automation"]' type=list
+obsidian property:set path="claude-sessions/2026-02-05-XXXXXXXX.md" name="rating" value="8" type=number
 ```
 
 **Add comment** (append to existing - use eval for complex logic):
 
 ```bash
-obsidian eval code="(async()=>{const f=app.vault.getAbstractFileByPath('Claude-Sessions/2026-02-05-XXXXXXXX.md');const ts=new Date().toISOString().slice(0,16).replace('T',' ');await app.fileManager.processFrontMatter(f,fm=>{const c=fm.comments||'';fm.comments=c?c+'\\n['+ts+'] New comment':'['+ts+'] New comment'});return 'updated'})()"
+obsidian eval code="(async()=>{const f=app.vault.getAbstractFileByPath('claude-sessions/2026-02-05-XXXXXXXX.md');const ts=new Date().toISOString().slice(0,16).replace('T',' ');await app.fileManager.processFrontMatter(f,fm=>{const c=fm.comments||'';fm.comments=c?c+'\\n['+ts+'] New comment':'['+ts+'] New comment'});return 'updated'})()"
 ```
 
 ## Via CLI
@@ -76,7 +76,7 @@ Get current session file path:
 echo $CLAUDE_SESSION_ID
 
 # Session file pattern
-Claude-Sessions/YYYY-MM-DD-{session_id[:8]}.md
+claude-sessions/YYYY-MM-DD-{session_id[:8]}.md
 ```
 
 ## Schema Reference

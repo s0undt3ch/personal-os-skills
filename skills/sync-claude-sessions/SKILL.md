@@ -50,7 +50,7 @@ cs close "done"            # Mark session done
 
 ## Output
 
-Sessions exported to `Claude-Sessions/` with:
+Sessions exported to `claude-sessions/` with:
 - Frontmatter: `type`, `date`, `session_id`, `title`, `summary`, `skills`, `messages`, `status`, `tags`, `rating`, `comments`
 - Content: Summary, Skills Used (linked), Artifacts (wiki-linked), My Notes, Conversation
 
